@@ -1,0 +1,28 @@
+#! /bin/bash
+
+#if [ ! "$(docker image inspect -f '{{.Id}}' gnap114039/thinkorswim)" ]; then
+#    # echo "No image name thinkorswim was found, start building image......" 
+#    # docker build -t thinkorswim .
+#    echo "No image name thinkorswim was found, start pulling image......" 
+#    docker pull gnap114039/thinkorswim
+#fi
+
+xhost +local:root
+if [ ! "$(docker ps -a | grep gnap114039/thinkorswim)" ]; then
+    echo "No container thinkorswim was found. Creating new container ......"
+    docker run -td --name thinkorswim\
+    --net=host \
+    --env="DISPLAY" \
+    --env="QT_X11_NO_MITSHM=1" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    gnap114039/thinkorswim:latest
+    docker exec thinkorswim ./thinkorswim
+    exit 0
+elif [ "$(docker container inspect -f '{{.State.Status}}' gnap114039/thinkorswim)" == "running" ]; then
+    docker exec thinkorswim ./thinkorswim
+    exit 0
+elif [ "$(docker container inspect -f '{{.State.Status}}' gnap114039/thinkorswim)" == "exited" ]; then
+    docker start thinkorswim
+    docker exec thinkorswim ./thinkorswim
+    exit 0
+fi

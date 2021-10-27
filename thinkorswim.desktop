@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=thinkorswim
+Comment=thinkorswim script launcher
+Exec=~/Documents/mydocker/thinkorswim/run
+Icon=~/Documents/mydocker/thinkorswim/thinkorswim.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;
