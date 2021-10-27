@@ -1,4 +1,4 @@
-# Docker thinkorswim
+# Docker thinkorswim for linux
 This is thinkorswim docker images.
 
 ## Step 1
