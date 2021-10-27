@@ -16,10 +16,10 @@ Just download this folder and place to the local direcroty whatever you like.
 Change the thinkorswim.desktop Exec and Icon attribute to corresponding path where this folder located.
 
 ## Step 5
-Place "thinkorswim.desktop" under directory --> ~/.local/share/applications
+Put the "thinkorswim.desktop" under directory --> ~/.local/share/applications
 
 ## Step 6
-Now you can find your thinkorswim shortcut on applications menu.
+Now you can find your thinkorswim shortcut on applications menu.     
 Note: If it does not appear on applications menu try to restart your computer.
 
 ## Reminder
