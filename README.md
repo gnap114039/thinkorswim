@@ -1,12 +1,12 @@
 # Thinkorswim docker image for linux
-This is thinkorswim linux desktop shortcut to launch the docker images.
+This is a linux desktop shortcut to launch thinkorswim docker images.
 
 ### Step 1
 download the docker images
 > docker pull gnap114039/thinkorswim
 
 ### Step 2
-Try to run the following command to make sure the script on this folder work properly
+Try to run the shortcut script call "run" on this folder to make sure it work properly.
 > ./run
 
 ### Step 3
