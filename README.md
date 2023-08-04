@@ -24,4 +24,5 @@ Now you can find your thinkorswim shortcut on applications menu.
 Note: If it does not appear on applications menu, try to restart your computer.
 
 ### Reminder
-If first time running up the container please be patient when the app showing "updating" message, it may take some time.
+1. If first time running up the container please be patient when the app showing "updating" message, it may take some time.
+2. if after login and not showing any window popup, try pressing superkey(windows key) + up/down arrow to maximize/minimize the window, the window should appear. (Found this issue on ubuntu 22.04)
